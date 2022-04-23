@@ -1,4 +1,4 @@
-// const url=`https://api.exchangerate.host/latest?base=${from}&symbols=${to}`;
+
 let fromRubl = document.querySelector("#btn1");
 let fromUsd = document.querySelector("#btn2");
 let fromEur = document.querySelector("#btn3");
@@ -24,6 +24,7 @@ function myFunc(){
    .then(res => res.json())
    .then(res=>{
     const new_rate = res.rates[outputValue];
+    rate.innerText = `1 ${inputValue} = ${new_rate} ${outputValue}`
    })
 }
 
