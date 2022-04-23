@@ -16,8 +16,6 @@ toRubl.addEventListener("click",myFunc);
 toUsd.addEventListener("click",myFunc);
 toEur.addEventListener("click",myFunc);
 toGbp.addEventListener("click",myFunc);
-let btn1=document.querySelectorAll("#btn-div-1 input");
-let btn2=document.querySelectorAll("#btn-div-2 input");
 console.log(btn1.value)
 function myFunc(){
    const inputValue=btn1[0];
