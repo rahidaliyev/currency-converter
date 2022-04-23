@@ -55,7 +55,7 @@ li:hover{
     margin-left: 253px;
     margin-top: 56px;
 }
-.btn-group button {
+.btn-group input {
    /* Green background */
   border: none; /* Green border */
   color: white; /* White text */
@@ -66,14 +66,14 @@ li:hover{
 
 
 }
-.btn-group button:first-child{
+.btn-group input:first-child{
    border-radius: 5px 0px 0px 5px;
 }
-.btn-group button:last-child{
+.btn-group input:last-child{
     border-radius: 0 5px 5px 0;
  }
 
-.btn-group button:not(:last-child) {
+.btn-group input:not(:last-child) {
   border-right: none; /* Prevent double borders */
 }
 
@@ -84,8 +84,8 @@ li:hover{
   display: table;
 }
 
-/* Add a background color on hover */
-.btn-group button:hover {
+
+.btn-group input:hover {
   background-color: #833AE0;
 }
 .btn-group{
@@ -133,6 +133,12 @@ margin-left: 16px;
 align-items: center;
 margin-top: 20px;
 color: #C6C6C6;
-
 }
+.main {
 
+    width: 100%;
+    overflow-x: hidden;
+  }
+  textarea:focus, input:focus{
+    outline: none;
+}
