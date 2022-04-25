@@ -18,7 +18,9 @@ toEur.addEventListener("click",myFunc);
 toGbp.addEventListener("click",myFunc);
 console.log(btn1.value)
 function myFunc(){
-   const inputValue=btn1[0];
+   inputValue.forEach(element => {
+       element
+   });
    const outputValue=btn2[1];
    fetch(`https://api.exchangerate.host/latest?base=${inputValue}&symbols=${outputValue}`)
    .then(res => res.json())
