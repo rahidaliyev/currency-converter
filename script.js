@@ -2,15 +2,14 @@ let fromCurrency=document.querySelectorAll('#input_amount')
 let toCurrency=document.querySelectorAll('#output_amount')
 let result1=document.querySelector('#result-1');
 let result2=document.querySelector('#result-2');
-let btnDiv1=document.querySelector('#btn-div-1')
-let btnDiv2=document.querySelector('#btn-div-2')
+let btnDiv1=document.querySelector('#btn-div-1');
+let btnDiv2=document.querySelector('#btn-div-2');
 let val1='RUB';
 let val2='USD';
 let dotChange1=fromCurrency.value;
 let dotChange2=toCurrency.value;
 let kurs1,kurs2;
-
-
+updateRates()
 
 async function updateRates(){
 try{
@@ -50,3 +49,25 @@ catch(err){
 console.log(err)
 }
 }
+
+btnDiv1.querySelectorAll("button").forEach(item=>{
+    item.addEventListener("click", _=>{
+        val1=item.innerText;
+        updateRates();
+    })
+})
+btnDiv2.querySelectorAll("button").forEach(item=>{
+    item.addEventListener("click", _=>{
+        val2=item.innerText;
+        updateRates();
+    })
+})
+
+fetch(`https://api.exchangerate.host/latest?base`)
+.then((response)=>{
+    return response.json();
+})
+.then((data)=>{
+    dotChange1=dotChange1.replaceAll(',','.')
+Object.keys(data.rates)
+});
