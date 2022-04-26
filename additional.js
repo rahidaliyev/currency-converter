@@ -1,5 +1,5 @@
-let btn1=document.querySelectorAll("#btn-div-1 input");
-let btn2=document.querySelectorAll("#btn-div-2 input");
+let btn1=document.querySelectorAll("#btn-div-1 button");
+let btn2=document.querySelectorAll("#btn-div-2 button");
 
 btn1.forEach(item=>{
     item.addEventListener("click",_=>{

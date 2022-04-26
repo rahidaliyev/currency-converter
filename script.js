@@ -20,7 +20,7 @@ try{
         fromCurrency.addEventListener("input",_=>{
             toCurrency.value=fromCurrency.value;
         });
-        result1.innerText=`1 ${val1}=1.000 ${val2}`;
+        result1.innerText=`1 ${val1}=1.0000 ${val2}`;
         result2.innerText=result1.innerText;
         toCurrency.value=fromCurrency.value;
     }else{ 
