@@ -1,5 +1,5 @@
-let fromCurrency=document.querySelectorAll('#input_amount')
-let toCurrency=document.querySelectorAll('#output_amount')
+let fromCurrency=document.querySelector('#input_amount')
+let toCurrency=document.querySelector('#output_amount')
 let result1=document.querySelector('#result-1');
 let result2=document.querySelector('#result-2');
 let btnDiv1=document.querySelector('#btn-div-1');
@@ -10,6 +10,11 @@ let dotChange1=fromCurrency.value;
 let dotChange2=toCurrency.value;
 let kurs1,kurs2;
 updateRates()
+
+fromCurrency.addEventListener("keyup",event=>{
+    fromCurrency.value=event.target.value.replace(",",".");
+    console.log(event.target.value)
+})
 
 async function updateRates(){
 try{
